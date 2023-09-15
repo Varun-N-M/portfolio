@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #f8fdff;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+}
+
+button {
+  @apply outline-none border-none;
+}
+
+.max-width {
+  @apply max-w-[1920px] mx-auto;
+}
+
+.social-icons {
+  @apply shadow-lg shadow-gray-500 rounded-full bg-gray-100 hover:scale-105 duration-300;
+}
+
+.bottom-line {
+  @apply relative;
+}
+.bottom-line::after {
+  @apply content-[""] absolute h-[3px] w-0 bg-blue-500 left-0 bottom-0 duration-300;
+}
+
+.bottom-line:hover::after {
+  @apply w-full;
+}
+
+.skills-container {
+  @apply flex flex-row justify-between items-center rounded-3xl shadow-xl shadow-gray-500 px-10 py-5 hover:scale-110 duration-300;
+}
+
+.project-tiles {
+  @apply md:max-w-6xl h-[55vh] max-md:h-fit shadow-xl shadow-gray-500 flex flex-col lg:flex-row justify-center items-center px-16 py-10 rounded-3xl gap-10;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-700;
+}
