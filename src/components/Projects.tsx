@@ -7,7 +7,7 @@ export const Projects = () => {
           <div className="project-tiles">
             <a href="https://to-do-app-vanillajs.netlify.app/" target="_blank">
               <img
-                src="public/resources/todo-app.PNG"
+                src="/resources/todo-app.PNG"
                 alt=""
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
@@ -26,7 +26,7 @@ export const Projects = () => {
           <div className="project-tiles">
             <a href="https://best-eats-clone.vercel.app/" target="_blank">
               <img
-                src="public/resources/food-app.PNG"
+                src="/resources/food-app.PNG"
                 alt=""
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
@@ -44,7 +44,7 @@ export const Projects = () => {
           <div className="project-tiles">
             <a href="https://weatherio-react-app.vercel.app/" target="_blank">
               <img
-                src="public/resources/weatherio.PNG"
+                src="/resources/weatherio.PNG"
                 alt=""
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
@@ -67,7 +67,7 @@ export const Projects = () => {
               target="_blank"
             >
               <img
-                src="public/resources/carhub.PNG"
+                src="/resources/carhub.PNG"
                 alt=""
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />

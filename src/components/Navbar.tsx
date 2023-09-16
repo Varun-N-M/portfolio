@@ -24,7 +24,7 @@ export const Navbar = () => {
       <div className="max-width flex flex-row justify-between items-center px-6 py-5 sm:px-16 ">
         <a href="/">
           <img
-            src="public/logo.svg"
+            src="/logo.svg"
             alt="logo"
             className="origin-contain w-[140px] h-[40px]"
           />
