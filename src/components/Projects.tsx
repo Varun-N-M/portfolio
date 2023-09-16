@@ -1,9 +1,9 @@
 export const Projects = () => {
   return (
-    <div className="w-full flex justify-start items-start">
+    <div className="w-full flex justify-start items-start pt-28" id="projects">
       <div className="max-width px-6 py-5 sm:px-16 flex flex-col justify-between">
         <h1 className="text-5xl font-bold">Projects</h1>
-        <div className="flex flex-col mt-10 gap-10 mb-20">
+        <div className="flex flex-col  gap-10 my-20">
           <div className="project-tiles">
             <a href="https://to-do-app-vanillajs.netlify.app/" target="_blank">
               <img
@@ -28,7 +28,7 @@ export const Projects = () => {
               <img
                 src="/resources/food-app.PNG"
                 alt=""
-                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5">

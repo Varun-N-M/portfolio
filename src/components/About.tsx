@@ -1,7 +1,7 @@
 export const About = () => {
   return (
     <div
-      className="w-full h-screen max-sm:h-fit flex justify-start items-start flex-wrap max-md:pt-36 pt-28"
+      className="w-full h-screen max-md:h-fit flex justify-start items-start flex-wrap max-md:pt-36 pt-28"
       id="about"
     >
       <div className="max-width px-6 py-5 sm:px-16 flex flex-col justify-between">

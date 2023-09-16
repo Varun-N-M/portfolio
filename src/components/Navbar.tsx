@@ -7,13 +7,47 @@ import { AiOutlineClose } from "react-icons/ai";
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
 
-  // const homeScroll = () => {
-  //   const nextSection = document.getElementById("home")
+  const homeScroll = () => {
+    const nextSection = document.getElementById("hero");
 
-  //   if(nextSection){
-  //     nextSection.scrollIntoView({behavior:"smooth"})
-  //   }
-  // }
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav(false);
+  };
+  const aboutScroll = () => {
+    const nextSection = document.getElementById("about");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav(false);
+  };
+  const projectsScroll = () => {
+    const nextSection = document.getElementById("projects");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav(false);
+  };
+
+  const skillsScroll = () => {
+    const nextSection = document.getElementById("skills");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav(false);
+  };
+  const contactScroll = () => {
+    const nextSection = document.getElementById("contact");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setNav(false);
+  };
 
   const handleClick = () => {
     setNav(true);
@@ -32,19 +66,22 @@ export const Navbar = () => {
         <nav>
           <div>
             <div className="md:flex hidden gap-5 font-semibold">
-              <a href="/" className="bottom-line">
+              <a onClick={homeScroll} className="bottom-line cursor-pointer">
                 Home
               </a>
-              <a href="/" className="bottom-line">
+              <a onClick={aboutScroll} className="bottom-line cursor-pointer">
                 About
               </a>
-              <a href="/" className="bottom-line">
+              <a onClick={skillsScroll} className="bottom-line cursor-pointer">
                 Skills
               </a>
-              <a href="/" className="bottom-line">
+              <a
+                onClick={projectsScroll}
+                className="bottom-line cursor-pointer"
+              >
                 Projects
               </a>
-              <a href="/" className="bottom-line">
+              <a onClick={contactScroll} className="bottom-line cursor-pointer">
                 Contact
               </a>
             </div>
@@ -87,7 +124,7 @@ export const Navbar = () => {
                   <Dialog.Panel className="relative w-full h-full bg-[#f8fdff] flex flex-col justify-between px-6 py-5">
                     <div className="flex flex-row justify-between items-center">
                       <img
-                        src="public/logo.svg"
+                        src="/logo.svg"
                         alt="logo"
                         className="origin-contain w-[100px] h-[30px]"
                       />
@@ -99,15 +136,23 @@ export const Navbar = () => {
                       </div>
                     </div>
                     <div className="flex flex-col text-gray-600 tracking-wide gap-5">
-                      <a href="/home" className="outline-none">
+                      <a onClick={homeScroll} className="cursor-pointer">
                         Home
                       </a>
-                      <a href="/">About</a>
-                      <a href="/">Skills</a>
-                      <a href="/">Projects</a>
-                      <a href="/">Contact</a>
+                      <a onClick={aboutScroll} className="cursor-pointer">
+                        About
+                      </a>
+                      <a onClick={skillsScroll} className="cursor-pointer">
+                        Skills
+                      </a>
+                      <a onClick={projectsScroll} className="cursor-pointer">
+                        Projects
+                      </a>
+                      <a onClick={contactScroll} className="cursor-pointer">
+                        Contact
+                      </a>
                     </div>
-                    <div className="mb-5 flex flex-col gap-5">
+                    <div className="mb-16 flex flex-col gap-5">
                       <p>Let's connect</p>
                       <div className="flex flex-row justify-around items-center">
                         <a

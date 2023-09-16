@@ -1,6 +1,16 @@
 import { BiLogoGithub, BiLogoGmail, BiLogoLinkedin } from "react-icons/bi";
 
 export const Hero = () => {
+
+  const contactScroll = () => {
+    const nextSection = document.getElementById("contact");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+  };
+
   return (
     <div className=" w-full md:h-screen flex flex-col justify-center items-center max-md:pt-60 pt-28 text-center" id="hero">
       <div className="max-width px-6 py-4 sm:px-16">
@@ -24,7 +34,7 @@ export const Hero = () => {
           <a href="https://github.com/Varun-N-M" className="social-icons p-6" target="_blank">
             <BiLogoGithub />
           </a>
-          <a href="/" className="social-icons p-6" target="_blank">
+          <a onClick={contactScroll} className="social-icons p-6">
             <BiLogoGmail />
           </a>
         </div>
