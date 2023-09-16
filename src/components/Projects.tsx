@@ -13,7 +13,7 @@ export const Projects = () => {
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5">
-              <h1 className="text-2xl lg:text-5xl font-bold capitalize">
+              <h1 className="text-2xl lg:text-5xl font-bold capitalize text-center">
                 To-Do-list App
               </h1>
               <p className="text-center">

@@ -152,13 +152,13 @@ export const Navbar = () => {
                         Contact
                       </a>
                     </div>
-                    <div className="mb-16 flex flex-col gap-5">
+                    <div className="mb-16 flex flex-col gap-5 ">
                       <p>Let's connect</p>
                       <div className="flex flex-row justify-around items-center">
                         <a
                           href="https://www.linkedin.com/in/varun-n-m-242391210"
                           target="_blank"
-                          className="social-icons p-4"
+                          className="social-icons p-4 outline-none"
                         >
                           <BiLogoLinkedin />
                         </a>

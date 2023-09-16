@@ -42,7 +42,7 @@ button {
 }
 
 .skills-container {
-  @apply flex flex-row justify-between items-center rounded-3xl shadow-xl shadow-gray-500 px-10 py-5 max-sm:w-96 hover:scale-110 duration-300 h-fit;
+  @apply flex flex-row justify-between items-center rounded-3xl shadow-xl shadow-gray-500 px-10 py-5 max-sm:w-80 hover:scale-110 duration-300 h-fit;
 }
 
 .project-tiles {
