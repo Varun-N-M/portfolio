@@ -3,12 +3,12 @@ export const Projects = () => {
     <div className="w-full flex justify-start items-start pt-28" id="projects">
       <div className="max-width px-6 py-5 sm:px-16 flex flex-col justify-between">
         <h1 className="text-5xl font-bold">Projects</h1>
-        <div className="flex flex-col  gap-10 my-20">
+        <div className="flex flex-col  gap-10 mt-10 mb-20">
           <div className="project-tiles">
             <a href="https://to-do-app-vanillajs.netlify.app/" target="_blank">
               <img
                 src="/resources/todo-app.PNG"
-                alt=""
+                alt="todo"
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
             </a>
@@ -27,7 +27,7 @@ export const Projects = () => {
             <a href="https://best-eats-clone.vercel.app/" target="_blank">
               <img
                 src="/resources/food-app.PNG"
-                alt=""
+                alt="food-app"
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
               />
             </a>
@@ -45,7 +45,7 @@ export const Projects = () => {
             <a href="https://weatherio-react-app.vercel.app/" target="_blank">
               <img
                 src="/resources/weatherio.PNG"
-                alt=""
+                alt="weather"
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
             </a>
@@ -68,7 +68,7 @@ export const Projects = () => {
             >
               <img
                 src="/resources/carhub.PNG"
-                alt=""
+                alt="car-hub"
                 className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
               />
             </a>

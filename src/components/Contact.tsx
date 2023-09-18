@@ -24,10 +24,10 @@ export const Contact = () => {
         className="pt-28 h-screen max-md:h-fit w-full flex justify-center items-center my-10"
       >
         <div className="max-width px-6 py-5 sm:px-16 shadow-xl shadow-gray-700 rounded-3xl flex flex-col items-center">
-          <h1 className="tracking-wider text-5xl font-bold text-gray-600 text-center">
+          <h1 className="tracking-wider text-5xl font-bold  text-center">
             Contact me
           </h1>
-          <div className="w-full flex flex-col lg:flex-row justify-between mt-5 mb-10 lg:mt-10 gap-5">
+          <div className="w-full flex flex-col lg:flex-row justify-between mt-5 mb-10 lg:mt-10 gap-5 font-semibold">
             <div className="w-full py-5 ">
               <p>
                 Email: <a className="underline">varunnm68@gmail.com</a>
@@ -41,7 +41,7 @@ export const Contact = () => {
                   <input
                     type="text"
                     name="name"
-                    className="w-full bg-gray-100 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
+                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
                     required
                     autoComplete="off"
                   />
@@ -51,7 +51,7 @@ export const Contact = () => {
                   <input
                     type="email"
                     name="email"
-                    className="w-full bg-gray-100 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
+                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
                     required
                     autoComplete="off"
                     min="8"
@@ -63,7 +63,7 @@ export const Contact = () => {
                 <input
                   type="text"
                   name="subject"
-                  className="w-full bg-gray-100 outline-none rounded-3xl px-6 py-1 mt-5"
+                  className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 mt-5"
                   required
                 />
               </div>
@@ -71,7 +71,7 @@ export const Contact = () => {
                 <h3>Message:</h3>
                 <textarea
                   name="message"
-                  className="w-full outline-none bg-gray-100 rounded-xl px-5 py-2 text-[12px]"
+                  className="w-full outline-none bg-gray-200 rounded-xl px-5 py-2 text-[12px]"
                 />
               </div>
             </div>

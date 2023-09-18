@@ -1,12 +1,21 @@
 export const About = () => {
+
+  const projectsScroll = () => {
+    const nextSection = document.getElementById("projects");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
-      className="w-full h-screen max-md:h-fit flex justify-start items-start flex-wrap max-md:pt-36 pt-28"
+      className="w-full h-screen max-md:h-fit flex justify-center items-center flex-wrap max-md:pt-36 pt-20"
       id="about"
     >
       <div className="max-width px-6 py-5 sm:px-16 flex flex-col justify-between">
         <h1 className="text-5xl font-bold">About me</h1>
-        <p className="mt-10 text-xl md:max-w-6xl py-2 tracking-widest">
+        <p className="mt-10 text-md md:max-w-6xl py-2 tracking-widest">
           I'm a self-taught front-end web developer with a passion for crafting
           web applications from the ground up. In just four months of dedicated
           learning, I've immersed myself in the world of web development. As a
@@ -23,7 +32,7 @@ export const About = () => {
           of web development.
         </p>
         <div className="mt-10">
-          <a href="/" className="underline">
+          <a onClick={projectsScroll} className="underline cursor-pointer">
             Check out some of my latest project
           </a>
         </div>

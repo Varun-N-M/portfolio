@@ -1,47 +1,40 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Dialog, Transition } from "@headlessui/react";
 import { BiLogoLinkedin, BiLogoGmail, BiLogoGithub } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { ToggleButton } from "./ToggleButton";
 
-export const Navbar = () => {
+interface mode {
+  setTheme: (theme: string) => void;
+  theme: string;
+}
+
+export const Navbar = ({ setTheme, theme }: mode) => {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
-  const homeScroll = () => {
-    const nextSection = document.getElementById("hero");
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 40) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setNav(false);
-  };
-  const aboutScroll = () => {
-    const nextSection = document.getElementById("about");
+  const sections = [
+    { id: "hero", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
 
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setNav(false);
-  };
-  const projectsScroll = () => {
-    const nextSection = document.getElementById("projects");
-
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setNav(false);
-  };
-
-  const skillsScroll = () => {
-    const nextSection = document.getElementById("skills");
-
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setNav(false);
-  };
-  const contactScroll = () => {
-    const nextSection = document.getElementById("contact");
+  const scrollIntoSection = (id: string) => {
+    const nextSection = document.getElementById(id);
 
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
@@ -54,45 +47,57 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="w-full fixed z-10 bg-[#f8fdff] shadow-lg shadow-gray-200">
+    <header
+      className={`w-full fixed z-10 ${shadow ? "shadow-lg" : ""} bg-inherit ${
+        theme === "light"
+          ? "shadow-gray-500 text-black"
+          : "shadow-gray-700 text-white"
+      }`}
+    >
       <div className="max-width flex flex-row justify-between items-center px-6 py-5 sm:px-16 ">
         <a href="/">
           <img
             src="/logo.svg"
             alt="logo"
-            className="origin-contain w-[140px] h-[40px]"
+            className={`origin-contain w-[140px] h-[40px] ${
+              theme === "light" ? "" : "invert"
+            }`}
           />
         </a>
         <nav>
           <div>
             <div className="md:flex hidden gap-5 font-semibold">
-              <a onClick={homeScroll} className="bottom-line cursor-pointer">
-                Home
-              </a>
-              <a onClick={aboutScroll} className="bottom-line cursor-pointer">
-                About
-              </a>
-              <a onClick={skillsScroll} className="bottom-line cursor-pointer">
-                Skills
-              </a>
-              <a
-                onClick={projectsScroll}
-                className="bottom-line cursor-pointer"
-              >
-                Projects
-              </a>
-              <a onClick={contactScroll} className="bottom-line cursor-pointer">
-                Contact
-              </a>
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  onClick={() => scrollIntoSection(section.id)}
+                  className="bottom-line cursor-pointer"
+                >
+                  {section.label}
+                </a>
+              ))}
             </div>
-            <div
-              className="md:hidden hover:scale-110 duration-200 cursor-pointer"
-              onClick={handleClick}
-            >
-              <GiHamburgerMenu size={25} />
+            <div className="md:hidden  duration-200 cursor-pointer flex flex-row gap-4">
+              <div
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              >
+                <ToggleButton theme={theme} />
+              </div>
+
+              <div onClick={handleClick} className="hover:scale-110">
+                <GiHamburgerMenu size={25} />
+              </div>
             </div>
           </div>
         </nav>
+
+        <div
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className="hidden md:flex cursor-pointer duration-200"
+        >
+          <ToggleButton theme={theme} />
+        </div>
+
         <Transition appear show={nav} as={Fragment}>
           <Dialog
             as="div"
@@ -121,40 +126,42 @@ export const Navbar = () => {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="relative w-full h-full bg-[#f8fdff] flex flex-col justify-between px-6 py-5">
+                  <Dialog.Panel
+                    className={`relative w-full h-full  flex flex-col justify-between px-6 py-5 text-black ${
+                      theme === "light"
+                        ? "bg-[#eef6fd]"
+                        : "bg-[#081B33] text-white "
+                    }`}
+                  >
                     <div className="flex flex-row justify-between items-center">
                       <img
                         src="/logo.svg"
                         alt="logo"
-                        className="origin-contain w-[100px] h-[30px]"
+                        className={`w-[100px] h-[30px] ${
+                          theme === "light" ? "" : "invert"
+                        }`}
                       />
                       <div
-                        className="social-icons p-3 cursor-pointer"
+                        className="social-icons p-3 cursor-pointer text-black"
                         onClick={() => setNav(false)}
                       >
                         <AiOutlineClose />
                       </div>
                     </div>
-                    <div className="flex flex-col text-gray-600 tracking-wide gap-5">
-                      <a onClick={homeScroll} className="cursor-pointer">
-                        Home
-                      </a>
-                      <a onClick={aboutScroll} className="cursor-pointer">
-                        About
-                      </a>
-                      <a onClick={skillsScroll} className="cursor-pointer">
-                        Skills
-                      </a>
-                      <a onClick={projectsScroll} className="cursor-pointer">
-                        Projects
-                      </a>
-                      <a onClick={contactScroll} className="cursor-pointer">
-                        Contact
-                      </a>
+                    <div className="flex flex-col tracking-wide gap-5">
+                      {sections.map((section) => (
+                        <a
+                          key={section.id}
+                          onClick={() => scrollIntoSection(section.id)}
+                          className="cursor-pointer text-[17px]"
+                        >
+                          {section.label}
+                        </a>
+                      ))}
                     </div>
                     <div className="mb-16 flex flex-col gap-5 ">
                       <p>Let's connect</p>
-                      <div className="flex flex-row justify-around items-center">
+                      <div className="flex flex-row justify-around items-center text-black">
                         <a
                           href="https://www.linkedin.com/in/varun-n-m-242391210"
                           target="_blank"
