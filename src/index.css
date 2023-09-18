@@ -44,15 +44,15 @@ button {
 }
 
 .project-tiles {
-  @apply md:max-w-6xl h-[60vh] max-md:h-fit shadow-lg shadow-gray-600 flex flex-col lg:flex-row justify-center items-center px-8 py-10 rounded-3xl gap-10 hover:scale-105 duration-300;
+  @apply md:max-w-6xl h-[60vh] max-md:h-fit  flex flex-col lg:flex-row justify-center items-center px-8 py-10 rounded-3xl gap-10 hover:scale-105 duration-300;
 }
 
 .dark-theme {
-  @apply bg-[#081B33] text-gray-100;
+  @apply bg-[#081B33] text-gray-100 transition duration-300;
 }
 
 .light-theme {
-  @apply bg-[#eef6fd] text-gray-800;
+  @apply bg-[#eef6fd] text-gray-800 transition duration-300;
 }
 
 ::-webkit-scrollbar {

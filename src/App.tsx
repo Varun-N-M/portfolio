@@ -18,7 +18,7 @@ export const App = () => {
       <Hero />
       <About />
       <Skills />
-      <Projects />
+      <Projects theme={theme} />
       <Contact />
     </div>
   );

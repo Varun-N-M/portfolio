@@ -41,7 +41,7 @@ export const Contact = () => {
                   <input
                     type="text"
                     name="name"
-                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
+                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2 text-black"
                     required
                     autoComplete="off"
                   />
@@ -51,7 +51,7 @@ export const Contact = () => {
                   <input
                     type="email"
                     name="email"
-                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2"
+                    className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 max-lg:mt-2 text-black"
                     required
                     autoComplete="off"
                     min="8"
@@ -63,7 +63,7 @@ export const Contact = () => {
                 <input
                   type="text"
                   name="subject"
-                  className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 mt-5"
+                  className="w-full bg-gray-200 outline-none rounded-3xl px-6 py-1 mt-5 text-black"
                   required
                 />
               </div>
@@ -71,7 +71,7 @@ export const Contact = () => {
                 <h3>Message:</h3>
                 <textarea
                   name="message"
-                  className="w-full outline-none bg-gray-200 rounded-xl px-5 py-2 text-[12px]"
+                  className="w-full outline-none bg-gray-200 rounded-xl px-5 py-2 text-black text-[12px]"
                 />
               </div>
             </div>
