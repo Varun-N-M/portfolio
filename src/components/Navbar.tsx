@@ -77,16 +77,19 @@ export const Navbar = ({ setTheme, theme }: mode) => {
                 </a>
               ))}
             </div>
-            <div className="md:hidden  duration-200 cursor-pointer flex flex-row gap-4">
-              <div
+            <div className="md:hidden flex flex-row gap-3">
+            <div 
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               >
                 <ToggleButton theme={theme} />
               </div>
+            <div className="duration-200 cursor-pointer flex flex-row gap-4">
+              
 
               <div onClick={handleClick} className="hover:scale-110">
                 <GiHamburgerMenu size={25} />
               </div>
+            </div>
             </div>
           </div>
         </nav>
