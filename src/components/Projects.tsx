@@ -20,11 +20,11 @@ export const Projects = ({ theme }: mode) => {
               <img
                 src="/resources/carhub.PNG"
                 alt="car-hub"
-                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5">
-              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize text-justify max-md:text-left">
+              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize  max-md:text-left">
                 CarHub Car rental app
               </h1>
               <p className="text-justify  max-md:text-left">
@@ -48,12 +48,12 @@ export const Projects = ({ theme }: mode) => {
               <img
                 src="/resources/weatherio.PNG"
                 alt="weather"
-                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5">
-              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize text-justify max-md:text-left">
-                Weatherio -Weather app
+              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize max-md:text-left">
+                Weatherio - Weather app
               </h1>
               <p className=" max-md:text-left text-justify">
                 Not a regular weather app... Using Reactjs css and multiple api
@@ -77,11 +77,11 @@ export const Projects = ({ theme }: mode) => {
               <img
                 src="/resources/food-app.PNG"
                 alt="food-app"
-                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 w-[650px]"
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5 ">
-              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize text-justify max-md:text-left">
+              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize max-md:text-left">
                 Best-eats Food delivery app
               </h1>
               <p className="text-justify max-md:text-left">
@@ -104,11 +104,11 @@ export const Projects = ({ theme }: mode) => {
               <img
                 src="/resources/todo-app.PNG"
                 alt="todo"
-                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10"
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
               />
             </a>
             <div className="flex flex-col justify-center items-center gap-6 px-5">
-              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize text-justify max-md:text-left">
+              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize max-md:text-left">
                 To-Do-list App
               </h1>
               <p className="text-justify max-md:text-left">
