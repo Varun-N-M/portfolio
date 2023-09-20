@@ -59,7 +59,7 @@ export const Navbar = ({ setTheme, theme }: mode) => {
           <img
             src="/logo.svg"
             alt="logo"
-            className={`origin-contain w-[140px] h-[40px] ${
+            className={`origin-contain w-[110px] h-[40px]  ${
               theme === "light" ? "" : "invert"
             }`}
           />

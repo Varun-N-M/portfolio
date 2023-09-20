@@ -52,7 +52,7 @@ button {
 }
 
 .light-theme {
-  @apply bg-[#eef6fd] text-gray-800 transition duration-300;
+  @apply bg-[#f7fbff] text-gray-800 transition duration-300;
 }
 
 ::-webkit-scrollbar {
@@ -69,4 +69,7 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-500;
+}
+.github-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
