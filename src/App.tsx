@@ -5,6 +5,7 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
+import { Analytics } from '@vercel/analytics/react';
 
 export const App = () => {
   const [theme, setTheme] = useState("light");
@@ -20,6 +21,7 @@ export const App = () => {
       <Skills />
       <Projects theme={theme} />
       <Contact />
+      <Analytics />
     </div>
   );
 };
