@@ -34,7 +34,7 @@ export const Hero = () => {
           <a href="https://github.com/Varun-N-M" className="social-icons p-6" target="_blank">
             <BiLogoGithub size={20}/>
           </a>
-          <a onClick={contactScroll} className="social-icons p-6">
+          <a onClick={contactScroll} className="social-icons cursor-pointer p-6">
             <BiLogoGmail size={20}/>
           </a>
         </div>

@@ -14,6 +14,40 @@ export const Projects = ({ theme }: mode) => {
             }`}
           >
             <a
+              href="https://nextjs-trello-clone-two.vercel.app/"
+              target="_blank"
+            >
+              <img
+                src="/resources/trello-app.PNG"
+                alt="car-hub"
+                className="hover:scale-105 duration-300 rounded-3xl max-md:mt-10 "
+              />
+            </a>
+            <div className="flex flex-col justify-center items-center gap-6 px-5">
+              <h1 className="w-full text-2xl lg:text-5xl font-bold capitalize  max-md:text-left">
+                Trello-Clone
+              </h1>
+              <p className="text-justify  max-md:text-left">
+                This is a work in progress app. Using Nextjs tailwind Material
+                Ui and other libraries I have built this app with "Drag and
+                drop" feature of Tasks and Lists.
+              </p>
+              <a
+                href="https://github.com/Varun-N-M/trello-clone"
+                target="_blank"
+              >
+                <button className=" px-5 py-2 rounded-xl text-sm hover:scale-105 hover:font-bold github-shadow">
+                  --GitHub
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            className={`project-tiles shadow-lg ${
+              theme === "light" ? " shadow-gray-500" : "shadow-[#3d587a]"
+            }`}
+          >
+            <a
               href="https://car-rental-app-nextjs-lovat.vercel.app/"
               target="_blank"
             >
@@ -32,8 +66,11 @@ export const Projects = ({ theme }: mode) => {
                 shows details of car manufacturer model,year,rent and more
                 features which is obtained from RapidApi.
               </p>
-              <a href="https://github.com/Varun-N-M/car-rental-app" target="_blank">
-                <button className=" px-5 py-2 rounded-xl text-sm hover:scale-105 github-shadow">
+              <a
+                href="https://github.com/Varun-N-M/car-rental-app"
+                target="_blank"
+              >
+                <button className=" px-5 py-2 rounded-xl text-sm hover:scale-105 hover:font-bold github-shadow">
                   --GitHub
                 </button>
               </a>
@@ -61,8 +98,11 @@ export const Projects = ({ theme }: mode) => {
                 method. This app can also show weather of user's current
                 location
               </p>
-              <a href="https://github.com/Varun-N-M/react-weather-app" target="_blank">
-                <button className=" px-5 py-2 rounded-xl text-sm hover:scale-105 github-shadow">
+              <a
+                href="https://github.com/Varun-N-M/react-weather-app"
+                target="_blank"
+              >
+                <button className=" px-5 py-2 rounded-xl text-sm hover:scale-105 hover:font-bold github-shadow">
                   --GitHub
                 </button>
               </a>
@@ -89,7 +129,7 @@ export const Projects = ({ theme }: mode) => {
                 eats with filter feature
               </p>
               <a href="https://github.com/Varun-N-M/food-app" target="_blank">
-                <button className="github-shadow px-5 py-2 rounded-xl text-sm hover:scale-105 ">
+                <button className="github-shadow px-5 py-2 rounded-xl text-sm hover:scale-105 hover:font-bold ">
                   --GitHub
                 </button>
               </a>
@@ -117,7 +157,7 @@ export const Projects = ({ theme }: mode) => {
                 completed.
               </p>
               <a href="https://github.com/Varun-N-M/to-do-app" target="_blank">
-                <button className="github-shadow px-5 py-2 rounded-xl text-sm hover:scale-105 ">
+                <button className="github-shadow px-5 py-2 rounded-xl text-sm hover:scale-105  hover:font-bold">
                   --GitHub
                 </button>
               </a>
@@ -128,4 +168,3 @@ export const Projects = ({ theme }: mode) => {
     </div>
   );
 };
-
